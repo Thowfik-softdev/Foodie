@@ -1,0 +1,361 @@
+/* Entire Body */
+body {
+  background-color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* about us */
+.about_us {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border-radius: 110px 20px;
+}
+
+/* Desinging the Nav Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  /* background-color: #1d1d1d;*/
+  background-color: #333333;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #f6b20e;
+  color: black;
+}
+
+.name {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Bg image in start */
+img {
+  width: 100%;
+}
+
+/* Text */
+h3 {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+/* slide bar to country foods */
+.main-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------- */
+/* Home Page slide CSS */
+.image-slideshow {
+  position: relative;
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div .carousel-cell:hover {
+  transform: scale(1.05) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+/* --------------------------------------------- */
+
+/* Cards about different countries */
+.main-carousel {
+  padding: 10px 10px;
+  overflow: auto;
+  white-space: nowrap;
+}
+.carousel-cell {
+  overflow: hidden;
+  border-radius: 10px;
+  display: inline-block;
+  white-space: normal; /* Reset white-space to normal for cell content */
+  width: 300px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+    0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  margin: 10px;
+}
+.carousel-cell img {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+.carousel-cell .card-inner {
+  padding: 0 20px 20px 20px;
+}
+.carousel-cell p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+}
+.carousel-cell h2 {
+  font-style: italic;
+  margin: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #f6b20e;
+  color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(90, 97, 105, 0.25);
+}
+.flickity-prev-next-button {
+  transition: 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(90, 97, 105, 0.25);
+}
+.flickity-prev-next-button svg {
+  height: 40%;
+  top: 30%;
+  opacity: 0.5;
+}
+.flickity-prev-next-button[disabled] {
+  visibility: hidden;
+  opacity: 0;
+}
+.flickity-viewport {
+  overflow-x: scroll; /* Enable horizontal scrolling for the viewport */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  white-space: nowrap;
+}
+.flickity-page-dots .dot {
+  height: 6px;
+  width: 6px;
+}
+.flickity-page-dots .dot.is-selected {
+  box-shadow: 0 0 0 2px #000;
+}
+
+/* ------------------------------------------- */
+/* info box */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.45;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: #ffc400;
+    }
+  }
+
+  &:hover .photo {
+    -webkit-transform: scale(1.15) rotate(2deg);
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+  }
+
+  .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+  .description {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+
+    h1,
+    h2 {
+      font-family: Poppins;
+    }
+
+    h1 {
+      line-height: 1;
+      margin: 0;
+      font-size: 1.7rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #a2a2a2;
+      margin-top: 5px;
+    }
+
+    .read-more {
+      text-align: right;
+
+      a {
+        color: #ffc400;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        background: #fff7de;
+        padding: 5px 15px;
+        border-radius: 15px;
+
+        &:after {
+          content: "\f054";
+          font-family: FontAwesome;
+          margin-left: -10px;
+          opacity: 0;
+          vertical-align: middle;
+          transition: margin 0.3s, opacity 0.3s;
+        }
+
+        &:hover:after {
+          margin-left: 5px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  p {
+    position: relative;
+    margin: 1rem 0 0;
+    color: #555;
+    font-size: 13px;
+
+    &:first-of-type {
+      margin-top: 1.25rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background: #ffc400;
+        width: 75px;
+        top: -1rem;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &:hover .details {
+    left: 0%;
+  }
+}
+
+.food_details {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media (min-width: 640px) {
+  .blog-card {
+    flex-direction: row;
+
+    .meta {
+      flex-basis: 40%;
+      height: auto;
+    }
+
+    .description {
+      flex-basis: 60%;
+      padding-top: 10px;
+      padding-left: 25px;
+
+      &:before {
+        -webkit-transform: skewX(-3deg);
+        transform: skewX(-3deg);
+        content: "";
+        background: #fff;
+        width: 30px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+
+    &.alt {
+      flex-direction: row-reverse;
+
+      .description:before {
+        left: inherit;
+        -webkit-transform: skew(3deg);
+        transform: skew(3deg);
+      }
+
+      .details {
+        padding-left: 25px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
